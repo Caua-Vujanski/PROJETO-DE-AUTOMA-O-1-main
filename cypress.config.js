@@ -1,6 +1,7 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
+  projectId: 'h7dove',
   e2e: {
     baseUrl: 'https://dev.erp.inovacarreira.com.br',
         experimentalSessionAndOrigin: true,
