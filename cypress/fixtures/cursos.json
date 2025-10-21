@@ -1,0 +1,51 @@
+[
+  {
+    "nomeCurso": "Engenharia de Software",
+    "codigoCurso": "ENG-SW-2025",
+    "nivelEnsino": "Graduação",
+    "tipoCurso": "Bacharelado",
+    "areaConhecimento": "Ciências Exatas e da Terra",
+    "modalidade": "Presencial",
+    "codigoINEP": "123456789",
+    "habilitacaoMasculina": "Engenheiro de Software",
+    "habilitacaoFeminina": "Engenheira de Software",
+    "grauConferido": "Bacharel em Engenharia de Software",
+    "vagasAnuais": 80,
+    "inicioFuncionamento": "01/03/2026",
+    "coordenador": "Prof. Dr. João Silva",
+    "descricao": "O curso de Engenharia de Software forma profissionais capacitados para desenvolver, projetar e gerenciar sistemas de software complexos."
+  },
+  {
+    "nomeCurso": "Administração de Empresas",
+    "codigoCurso": "ADM-2025",
+    "nivelEnsino": "Graduação",
+    "tipoCurso": "Bacharelado",
+    "areaConhecimento": "Ciências Sociais Aplicadas",
+    "modalidade": "EAD",
+    "codigoINEP": "987654321",
+    "habilitacaoMasculina": "Administrador",
+    "habilitacaoFeminina": "Administradora",
+    "grauConferido": "Bacharel em Administração",
+    "vagasAnuais": 120,
+    "inicioFuncionamento": "15/02/2026",
+    "coordenador": "Profa. Dra. Maria Santos",
+    "descricao": "O curso de Administração forma profissionais aptos a gerenciar organizações e tomar decisões estratégicas."
+  },
+  {
+    "nomeCurso": "Medicina",
+    "codigoCurso": "MED-2025",
+    "nivelEnsino": "Graduação",
+    "tipoCurso": "Bacharelado",
+    "areaConhecimento": "Ciências da Saúde",
+    "modalidade": "Presencial",
+    "codigoINEP": "456789123",
+    "habilitacaoMasculina": "Médico",
+    "habilitacaoFeminina": "Médica",
+    "grauConferido": "Bacharel em Medicina",
+    "vagasAnuais": 60,
+    "inicioFuncionamento": "01/08/2026",
+    "coordenador": "Prof. Dr. Carlos Oliveira",
+    "descricao": "O curso de Medicina forma profissionais capacitados para atuar na promoção, prevenção e recuperação da saúde humana."
+  }
+]
+

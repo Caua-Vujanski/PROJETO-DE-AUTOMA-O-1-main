@@ -1,0 +1,29 @@
+{
+  "name": "automacao-cadastro-curso",
+  "version": "1.0.0",
+  "description": "Projeto de automação de testes com Cypress para cadastro de cursos",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test": "cypress run",
+    "test:chrome": "cypress run --browser chrome",
+    "test:firefox": "cypress run --browser firefox",
+    "test:headed": "cypress run --headed",
+    "test:cadastro": "cypress run --spec 'cypress/e2e/cadastro_curso.cy.js'",
+    "test:identificar": "cypress run --spec 'cypress/e2e/identificar_seletores.cy.js'"
+  },
+  "keywords": [
+    "cypress",
+    "automacao",
+    "testes",
+    "e2e",
+    "qa",
+    "cadastro-curso"
+  ],
+  "author": "QA Engineer",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.17.0"
+  }
+}
