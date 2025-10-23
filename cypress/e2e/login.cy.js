@@ -6,5 +6,10 @@ describe('Login', () => {
             cy.get('#password-input').type('7Y/6p0p\\iYd{')
                 cy.get('button[type="submit"]').click()
                   cy.url({ timeout: 5000 }).should('include', '/dashboard')
+
+    c
+
+
+
   })
 })

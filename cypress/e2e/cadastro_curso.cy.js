@@ -17,14 +17,17 @@ describe('Fluxo Completo - Login e Cadastro', () => {
     cy.contains('Código do Curso').scrollIntoView().parent()
       .find('input, textarea').clear().type('TST-P')
     
-    cy.contains('Nível de Ensino').scrollIntoView().parent().find('input, button, [role="combobox"]').first().click()
-    cy.get('[role="dialog"]:visible').contains('Pós-Graduação').click();
+    cy.contains('span', 'Selecione o Nível de Ensino').click()
+      cy.contains('div', 'Pós-Graduação').click()
     
-    cy.selecionarOpcaoAleatoriaDireto('Tipo de Curso')
+    cy.contains('span', 'Selecione o tipo do Curso').click()
+      cy.contains('div', 'MBA').click()
     
-    cy.selecionarOpcaoAleatoriaDireto('Área de Conhecimento')
+    cy.contains('span', 'Selecione a Área de conhecimento').click()
+      cy.contains('div', 'Engenharias').click()
     
-    cy.selecionarOpcaoAleatoriaDireto('Modalidade')
+    cy.contains('span', 'Selecione a modalidade').click()
+      cy.contains('div', 'Ambas').click()
     
     cy.contains('Código INEP/MEC').scrollIntoView().parent()
       .find('input, textarea').clear().type(Math.floor(Math.random() * 1000000000).toString())
@@ -44,7 +47,8 @@ describe('Fluxo Completo - Login e Cadastro', () => {
     cy.contains('Início de Funcionamento').scrollIntoView().parent()
       .find('input, textarea').clear().type('01/03/2026')
     
-    cy.selecionarOpcaoAleatoriaDireto('Coordenador do Curso')
+    cy.contains('span', 'Selecione o colaborador').click()
+      cy.contains('div', 'Professor Responsável Padrão').click()
     
     cy.contains('Descrição do Conhecimento do Curso').scrollIntoView().parent()
       .find('input, textarea').clear()
