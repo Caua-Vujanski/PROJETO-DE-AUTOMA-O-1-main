@@ -24,16 +24,36 @@ it('Deve fazer o cadastro completo de disciplinas', () => {
     cy.wait(1000)
     cy.get('button.ml-auto.w-9').click();
 
-    cy.contains('span', 'Selecione uma opção').click()
-        cy.contains('div', 'Avaliação 1').click()
+    cy.contains("label", "Nome da Avaliação").parent().click().within(() => {
+        cy.contains("div", "Avaliação 1").click();
+    });
+    
+    cy.contains('Nota Final').scrollIntoView().parent()
+        .find('input, textarea').clear().type('6')
+
+    
+    cy.contains('div', 'Selecione uma opção').click()
+        cy.contains('div', 'Média').click()
+
+    cy.contains('button', 'Avançar').click()
+    
+    cy.get('button.ml-auto.w-9').click();
+
+    cy.contains('div', 'Selecione uma opção').click()
+        cy.contains('div', 'Trabalho Final').click()
+
+    cy.contains('Nota Final').scrollIntoView().parent()
+        .find('input, textarea').clear().type('6')
+
+        cy.contains('Peso').scrollIntoView().parent()
+        .find('input, textarea').clear().type('10')
+
+        cy.contains('button', 'Avançar').click()
 
 
-
-
-
-
-
-
-
+    cy.contains('span', 'Selecione uma disciplina').click()
+        cy.contains('div', 'ADMINISTRAÇÃO DA PRODUÇÃO').click()
+        cy.contains('button', 'Avançar').click()
+        cy.contains('button', 'Concluir').click()
     })
 })

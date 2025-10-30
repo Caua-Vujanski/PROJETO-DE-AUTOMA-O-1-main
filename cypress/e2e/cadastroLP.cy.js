@@ -4,7 +4,6 @@ describe('Cadastro completo', () => {
 
         cy.visit('https://matriculapos.dev.fatecie.edu.br/inscription')
 
-        //cadastro da primeira pagina
         cy.contains('Nome Completo').scrollIntoView().parent()
             .find('input, textarea').clear().type('Silva Da Silva')
 
@@ -25,7 +24,6 @@ describe('Cadastro completo', () => {
 
         cy.contains('button', 'Próximo').scrollIntoView().click()
 
-        //cadastro da segundia pagina 
 
         cy.contains('Digite seu CEP').scrollIntoView().parent()
             .find('input, textarea').clear().type('87020-015')
@@ -35,8 +33,6 @@ describe('Cadastro completo', () => {
             .find('input, textarea').clear().type('000')
 
         cy.contains('Button', 'Próximo').scrollIntoView().click()
-
-        //cadastro pagna final
 
         cy.contains("div", "ESPECIALIZAÇÃO EM ARQUITETURA E URBANISMO 123").click()
 

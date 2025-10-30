@@ -6,7 +6,7 @@ describe('Fluxo Completo - Login e Cadastro', () => {
     cy.get('#login-input', { timeout: 10000 }).should('be.visible').type('admin')
     cy.get('#password-input').type('7Y/6p0p\\iYd{')
     cy.get('button[type="submit"]').click()
-    cy.url({ timeout: 5000 }).should('include', '/dashboard')
+    cy.url({ timeout: 1000 }).should('include', '/dashboard')
     
     cy.visit('https://dev.erp.inovacarreira.com.br/v2/academico/cursos/criacao')
     cy.wait(100)
@@ -48,7 +48,7 @@ describe('Fluxo Completo - Login e Cadastro', () => {
       .find('input, textarea').clear().type('01/03/2026')
     
     cy.contains('span', 'Selecione o colaborador').click()
-      cy.contains('div', 'Professor Responsável Padrão').click()
+      cy.contains('div', 'Cauã').click()
     
     cy.contains('Descrição do Conhecimento do Curso').scrollIntoView().parent()
       .find('input, textarea').clear()
@@ -62,18 +62,14 @@ describe('Fluxo Completo - Login e Cadastro', () => {
       .find('input, textarea').clear().type('Autorização Exemplo ');
 
     cy.get('button[type="submit"]').scrollIntoView().wait(500).click();
-
     cy.wait(100);
+    
 
- cy.get('button[type="submit"]').scrollIntoView().wait(500).click();
-
+    cy.get('button[type="submit"]').scrollIntoView().wait(500).click();
     cy.wait(500);
-
-    cy.wait(500); 
     cy.contains('button', 'Excluir Dados').click();
     cy.wait(500);
-
-  cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click(); 
+    cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click(); 
 
   })
 })

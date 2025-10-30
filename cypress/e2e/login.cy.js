@@ -7,9 +7,5 @@ describe('Login', () => {
                 cy.get('button[type="submit"]').click()
                   cy.url({ timeout: 5000 }).should('include', '/dashboard')
 
-    c
-
-
-
   })
 })
