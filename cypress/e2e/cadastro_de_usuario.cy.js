@@ -5,7 +5,7 @@ describe('Cadastro de Usuario', () => {
         cy.visit('https://dev.erp.inovacarreira.com.br/v2/controle-de-acesso/usuarios/criacao')
         cy.wait(1000)
 
-        cy.contains('td', 'Rafael Dos Santos Schild').parent().click()
+        cy.contains('td', 'Cauã Vujanski').parent().click()
         cy.contains('Button', 'Avançar').click()
 
         cy.contains('Mensageria').click()
