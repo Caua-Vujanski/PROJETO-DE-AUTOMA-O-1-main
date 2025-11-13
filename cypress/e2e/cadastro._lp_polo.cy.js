@@ -32,7 +32,7 @@ describe('Cadastro completo', () => {
         cy.contains('Número').scrollIntoView().parent()
             .find('input, textarea').clear().type('000')
 
-        cy.contains('Button', 'Avançar').scrollIntoView().click()
+       cy.contains('Button', 'Avançar').scrollIntoView().click()
 
         cy.get('button[role="combobox"]').contains('Selecione um curso').click();
         cy.contains('ESPECIALIZAÇÃO EM ARQUITETURA E URBANISMO 123').should('be.visible').click();

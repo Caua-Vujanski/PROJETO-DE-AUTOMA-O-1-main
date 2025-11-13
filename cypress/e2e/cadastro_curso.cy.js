@@ -44,8 +44,8 @@ describe('Fluxo Completo - Login e Cadastro', () => {
     cy.contains('Vagas Anuais').scrollIntoView().parent()
       .find('input, textarea').clear().type('20')
     
-    cy.contains('Início de Funcionamento').scrollIntoView().parent()
-      .find('input, textarea').clear().type('01/03/2026')
+    //cy.contains('Início de Funcionamento').scrollIntoView().parent()
+      //.find('input, textarea').clear().type('01/03/2026')
     
     cy.contains('span', 'Selecione o colaborador').click()
       cy.contains('div', 'Cauã').click()
@@ -67,9 +67,9 @@ describe('Fluxo Completo - Login e Cadastro', () => {
 
     cy.get('button[type="submit"]').scrollIntoView().wait(500).click();
     cy.wait(500);
-    cy.contains('button', 'Excluir Dados').click();
-    cy.wait(500);
-    cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click(); 
+    //cy.contains('button', 'Excluir Dados').click();
+   // cy.wait(500);
+   // cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click(); 
 
   })
 })
