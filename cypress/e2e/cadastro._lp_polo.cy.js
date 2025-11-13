@@ -2,7 +2,7 @@ describe('Cadastro completo', () => {
 
     it('Deve fazer o cadastro completo', () => {
 
-        cy.visit('https://lp-polo-dev.inovacarreira.com.br/inscription?polo=K9ClolJAp3j+I+H0E7bcuQ==')
+        cy.visit('https://matriculapos.dev.fatecie.edu.br/inscription')
 
         cy.contains('Nome Completo').scrollIntoView().parent()
             .find('input, textarea').clear().type('Silva Da Silva')
@@ -22,7 +22,7 @@ describe('Cadastro completo', () => {
         cy.contains('E-mail').scrollIntoView().parent()
             .find('input, textarea').clear().type('silva@gmail.com')
 
-        cy.contains('button', 'Avançar').scrollIntoView().click()
+        cy.contains('button', 'Próximo').scrollIntoView().click()
 
 
         cy.contains('Digite seu CEP').scrollIntoView().parent()
@@ -32,7 +32,7 @@ describe('Cadastro completo', () => {
         cy.contains('Número').scrollIntoView().parent()
             .find('input, textarea').clear().type('000')
 
-       cy.contains('Button', 'Avançar').scrollIntoView().click()
+       cy.contains('Button', 'Próximo').scrollIntoView().click()
 
         cy.get('button[role="combobox"]').contains('Selecione um curso').click();
         cy.contains('ESPECIALIZAÇÃO EM ARQUITETURA E URBANISMO 123').should('be.visible').click();
