@@ -40,7 +40,7 @@ describe('Cadastro completo de disciplinas', () => {
         cy.get('button.ml-auto.w-9').click();
 
         cy.contains('div', 'Selecione uma opção').click()
-        cy.contains('div', 'Trabalho Final').click()
+        cy.contains('div', 'AE 01').click()
 
         cy.contains('label', 'Nota Final').scrollIntoView().parent()
             .find('input, textarea').clear().type('6')

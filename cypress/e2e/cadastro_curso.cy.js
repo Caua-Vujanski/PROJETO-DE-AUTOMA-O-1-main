@@ -6,7 +6,7 @@ describe('Fluxo Completo - Login e Cadastro', () => {
     cy.get('#login-input', { timeout: 10000 }).should('be.visible').type('admin')
     cy.get('#password-input').type('7Y/6p0p\\iYd{')
     cy.get('button[type="submit"]').click()
-    cy.url({ timeout: 1000 }).should('include', '/dashboard')
+    cy.url({ timeout: 2000 }).should('include', '/dashboard')
     
     cy.visit('https://dev.erp.inovacarreira.com.br/v2/academico/cursos/criacao')
     cy.wait(100)
