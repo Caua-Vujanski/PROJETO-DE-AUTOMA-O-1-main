@@ -12,10 +12,10 @@ describe('Fluxo Completo - Login e Cadastro', () => {
     cy.wait(100)
 
     cy.contains('Nome do Curso').scrollIntoView().parent()
-      .find('input, textarea').clear().type('TESTE PÓS')
+      .find('input, textarea').clear().type('TESTE PÓSS')
     
     cy.contains('Código do Curso').scrollIntoView().parent()
-      .find('input, textarea').clear().type('TST-P')
+      .find('input, textarea').clear().type('TSST-P')
     
     cy.contains('span', 'Selecione o Nível de Ensino').click()
       cy.contains('div', 'Pós-Graduação').click()
@@ -23,6 +23,9 @@ describe('Fluxo Completo - Login e Cadastro', () => {
     cy.contains('span', 'Selecione o tipo do Curso').click()
       cy.contains('div', 'MBA').click()
     
+      cy.contains('span', 'Selecione o Grupo').click()
+      cy.contains('div', 'Grupo 1').click()
+      
     cy.contains('span', 'Selecione a Área de conhecimento').click()
       cy.contains('div', 'Engenharias').click()
     
@@ -67,9 +70,9 @@ describe('Fluxo Completo - Login e Cadastro', () => {
 
     cy.get('button[type="submit"]').scrollIntoView().wait(500).click();
     cy.wait(500);
-    //cy.contains('button', 'Excluir Dados').click();
-   // cy.wait(500);
-   // cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click(); 
+    cy.contains('button', 'Excluir Dados').click();
+    cy.wait(500);
+    cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click(); 
 
   })
 })
