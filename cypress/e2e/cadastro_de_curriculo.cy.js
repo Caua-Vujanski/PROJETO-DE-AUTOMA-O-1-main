@@ -184,8 +184,11 @@ it('Deve fazer o cadastro de curriculo e exclusão', () => {
 
     cy.contains('Button', 'Avançar').click()
         cy.wait(500)
-   // cy.contains('Dias para a Liberação').scrollIntoView().parent()
-   //     .find('input, textarea').clear().type('30')
+
+    cy.get('input[value="0"]').each(($el, index, $list) => {
+        cy.wrap($el)
+            .type('30', { force: true })
+});
 
     cy.contains('Button', 'Avançar').click()
 
