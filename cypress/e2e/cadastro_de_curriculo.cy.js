@@ -70,7 +70,7 @@ it('Deve fazer o cadastro de curriculo e exclusão', () => {
 
     cy.contains('Nota?').closest('div')
         .contains('p', 'Sim').click();
-            cy.wait(1000)
+           // cy.wait(1000)
 
     cy.get('svg.lucide-chevron-right').closest('button').click()
 
@@ -104,7 +104,7 @@ it('Deve fazer o cadastro de curriculo e exclusão', () => {
 
     cy.contains('Nota?').closest('div')
         .contains('p', 'Sim').click();
-            cy.wait(1000)
+            //cy.wait(1000)
 
 
     cy.get('svg.lucide-chevron-right').closest('button').click()
@@ -145,7 +145,7 @@ it('Deve fazer o cadastro de curriculo e exclusão', () => {
 
     cy.contains('Nota?').closest('div')
         .contains('p', 'Sim').click();
-            cy.wait(1000)
+            //cy.wait(1000)
 
 
     cy.get('svg.lucide-chevron-right').closest('button').click()    
@@ -180,8 +180,23 @@ it('Deve fazer o cadastro de curriculo e exclusão', () => {
 
     cy.contains('Nota?').closest('div')
         .contains('p', 'Sim').click();
-            cy.wait(1000)
+            //cy.wait(1000)
 
+    cy.contains('Button', 'Avançar').click()
+        cy.wait(500)
+   // cy.contains('Dias para a Liberação').scrollIntoView().parent()
+   //     .find('input, textarea').clear().type('30')
+
+    cy.contains('Button', 'Avançar').click()
+
+    cy.contains('div', 'DESCONTO DE TESTE').click()
+
+    cy.contains('Button', 'Avançar').click()
+    cy.contains('Button', 'Concluir').click()
+
+    cy.contains('button', 'Excluir Dados').click();
+    cy.wait(500);
+    cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click();                 
 
     })
 })
