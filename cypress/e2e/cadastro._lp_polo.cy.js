@@ -2,7 +2,7 @@ describe('Cadastro completo', () => {
 
     it('Deve fazer o cadastro completo', () => {
 
-        cy.visit('https://matriculapos.dev.fatecie.edu.br/inscription')
+        cy.visit('https://lp-polo-dev.inovacarreira.com.br/inscription?polo=K9ClolJAp3j+I+H0E7bcuQ==')
 
         cy.contains('Nome Completo').scrollIntoView().parent()
             .find('input, textarea').clear().type('Silva Da Silva')
@@ -22,7 +22,7 @@ describe('Cadastro completo', () => {
         cy.contains('E-mail').scrollIntoView().parent()
             .find('input, textarea').clear().type('silva@gmail.com')
 
-        cy.contains('button', 'Próximo').scrollIntoView().click()
+        cy.contains('button', 'Avançar').scrollIntoView().click()
 
 
         cy.contains('Digite seu CEP').scrollIntoView().parent()
@@ -32,24 +32,24 @@ describe('Cadastro completo', () => {
         cy.contains('Número').scrollIntoView().parent()
             .find('input, textarea').clear().type('000')
 
-       cy.contains('Button', 'Próximo').scrollIntoView().click()
+       cy.contains('Button', 'Avançar').scrollIntoView().click()
 
-        cy.get('button[role="combobox"]').contains('Selecione um curso').click();
-        cy.contains('ESPECIALIZAÇÃO EM ARQUITETURA E URBANISMO 123').should('be.visible').click();
+       cy.get('button[role="combobox"]').contains('Selecione um curso').click();
+        cy.contains('BACHARELADO EM ADMINISTRAÇÃO').should('be.visible').click();
 
-        cy.selecionarOpcaoAleatoriaDireto('Estado')
-        cy.selecionarOpcaoAleatoriaDireto('Cidade')
-        cy.selecionarOpcaoAleatoriaDireto('Qual polo prefere estudar?')
-        cy.selecionarOpcaoAleatoriaDireto('Planos de Pagamento')
-        cy.selecionarOpcaoAleatoriaDireto('Dia de vencimento das mensalidades')
-        cy.contains('label', 'Pix').click()
-        cy.contains('Possui cupom de desconto?').scrollIntoView().parent()
-            .find('input, textarea').clear().type('bolsa100')
+         cy.get('button[role="combobox"]').contains('Selecione o plano de pagamento').click();
+        cy.contains('47 x 66').should('be.visible').click();
 
-        cy.get('[role="checkbox"][data-slot="checkbox"]').eq(0).click();
-        cy.get('[role="checkbox"][data-slot="checkbox"]').eq(1).click();
-        cy.contains('Button', 'Enviar').scrollIntoView().click()
-        
+        cy.get('button[role="combobox"]').contains('Selecione o dia de vencimento').click();
+        cy.contains('10').should('be.visible').click();
+       
+        cy.contains('Cupom').scrollIntoView().parent()
+            .find('input, textarea').clear().type('1REALGRADUACAOEAD')
+
+        cy.contains('span', 'Selecione um polo presencial').click()
+            cy.contains('div', 'MARINGÁ (MEGA POLO) - PR').click()
+
+
 
     })
 })
