@@ -201,5 +201,7 @@ it('Deve fazer o cadastro de curriculo e exclusão', () => {
     cy.wait(500);
     cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click();                 
 
+
+    cy.tst
     })
 })
