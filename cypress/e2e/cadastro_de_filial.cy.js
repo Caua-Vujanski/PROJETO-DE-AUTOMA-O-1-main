@@ -4,7 +4,7 @@ describe('Fluxo do cadastro de filial', () => {
         cy.wait(1000)
 
     cy.login('admin', '7Y/6p0p\\iYd{')
-        cy.visit('https://dev.erp.inovacarreira.com.br/v2/configuracoes/sistema/geral/filiais/criacao')
+        cy.visit('https://hml.erp.inovacarreira.com.br/v2/configuracoes/sistema/geral/filiais/criacao')
 
 
     cy.contains('CNPJ').scrollIntoView().parent()

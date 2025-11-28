@@ -4,13 +4,13 @@ it('Deve fazer o cadastro de curriculo e exclusão', () => {
 
 cy.wait(1000) 
  cy.login('admin', '7Y/6p0p\\iYd{')
-        cy.visit('https://dev.erp.inovacarreira.com.br/v2/academico/curriculos/criacao')
+        cy.visit('https://hml.erp.inovacarreira.com.br/v2/academico/curriculos/criacao')
         
     cy.contains('Nome do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('TESTE AUTOMATIZADO')
+        .find('input, textarea').clear().type('AUTOMATIZADO')
 
     cy.contains('Código do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('AUTO-404')
+        .find('input, textarea').clear().type('--AUTO--')
 
     cy.contains('span', 'Selecione um nivel de ensino').click()
         cy.contains('div', 'Graduação').click()
@@ -197,5 +197,4 @@ cy.wait(1000)
     cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click();                 
 
 })
-
-})
+    })

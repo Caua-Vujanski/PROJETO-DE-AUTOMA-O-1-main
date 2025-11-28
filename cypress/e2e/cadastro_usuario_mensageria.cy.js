@@ -4,7 +4,7 @@ describe('Deve criar cadastro de usuario mensageria', () => {
         cy.login('admin', '7Y/6p0p\\iYd{');
             cy.wait(500)
 
-        cy.visit('https://dev.erp.inovacarreira.com.br/v2/mensageria/configuracoes/usuarios-mensageria/criacao')
+        cy.visit('https://hml.erp.inovacarreira.com.br/v2/mensageria/configuracoes/usuarios-mensageria/criacao')
             cy.wait(1000)
 
         cy.get("input[placeholder='Pesquise...']").type('Cauã Vujanski')

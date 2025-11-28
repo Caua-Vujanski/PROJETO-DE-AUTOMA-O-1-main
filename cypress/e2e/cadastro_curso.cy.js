@@ -8,7 +8,7 @@ describe('Fluxo Completo - Login e Cadastro', () => {
     cy.get('button[type="submit"]').click()
     cy.url({ timeout: 2000 }).should('include', '/dashboard')
     
-    cy.visit('https://dev.erp.inovacarreira.com.br/v2/academico/cursos/criacao')
+    cy.visit('https://hml.erp.inovacarreira.com.br/v2/academico/cursos/criacao')
     cy.wait(100)
 
     cy.contains('Nome do Curso').scrollIntoView().parent()

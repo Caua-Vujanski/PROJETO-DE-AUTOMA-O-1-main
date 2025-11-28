@@ -1,6 +1,6 @@
 
 Cypress.Commands.add('login', () => {
-  cy.visit('https://dev.erp.inovacarreira.com.br/login')
+  cy.visit('https://hml.erp.inovacarreira.com.br/login')
   cy.get('#login-input', { timeout: 5000 }).type('admin')
   cy.get('#password-input').type('7Y/6p0p\\iYd{')
   cy.get('button[type="submit"]').click()

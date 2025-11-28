@@ -2,7 +2,7 @@
 describe('Cadastro de Pessoa', () => {
     it('Deve fazer o cadastro completo', () => {
         cy.login('admin', '7Y/6p0p\\iYd{');
-        cy.visit('https://dev.erp.inovacarreira.com.br/v2/controle-de-acesso/pessoas/criacao')
+        cy.visit('https://hml.erp.inovacarreira.com.br/v2/controle-de-acesso/pessoas/criacao')
         //step 1
         cy.contains('Nome Completo').scrollIntoView().parent()
             .find('input, textarea').clear().type('Pessoa de teste')
