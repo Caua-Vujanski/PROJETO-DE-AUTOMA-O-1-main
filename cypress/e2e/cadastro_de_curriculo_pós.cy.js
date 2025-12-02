@@ -7,10 +7,10 @@ it('Deve fazer o cadastro de curriculo e exclusão', () => {
         cy.wait(1000)
 
     cy.contains('Nome do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('AUTOMATIZADO')
+        .find('input, textarea').clear().type('AUTOMATIZADOo')
 
     cy.contains('Código do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('--AUTO--')
+        .find('input, textarea').clear().type('--AUTOo--')
 
     cy.contains('span', 'Selecione um nivel de ensino').click()
       cy.contains('div', 'Pós-Graduação').click()
@@ -194,8 +194,16 @@ it('Deve fazer o cadastro de curriculo e exclusão', () => {
 
     cy.contains('div', 'DESCONTO DE TESTE').click()
 
-    cy.contains('Button', 'Avançar').click()
-    cy.contains('Button', 'Concluir').click()
+      cy.contains('Button', 'Avançar').click()
+      cy.contains('Button', 'Concluir').click()
+      cy.contains('button', 'Editar Dados').click()
+      cy.contains('button', 'Avançar').click()
+      cy.contains('button', 'Avançar').click()
+      cy.contains('button', 'Avançar').click()
+      cy.contains('button', 'Avançar').click()
+      cy.contains('button', 'Avançar').click()
+      cy.contains('Button', 'Concluir').click()
+
 
     cy.contains('button', 'Excluir Dados').click();
     cy.wait(500);
