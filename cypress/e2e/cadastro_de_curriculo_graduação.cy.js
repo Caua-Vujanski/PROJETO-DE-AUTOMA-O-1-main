@@ -193,7 +193,11 @@ cy.wait(1000)
     cy.contains('Button', 'Concluir').click()
 
     cy.contains('button', 'Editar Dados').click()
-    cy.contains('button', 'Avançar').click()
+      cy.contains('button', 'Avançar').click()
+      cy.contains('button', 'Avançar').click()
+      cy.contains('button', 'Avançar').click()
+      cy.contains('button', 'Avançar').click()
+      cy.contains('Button', 'Concluir').click()
         
     cy.contains('button', 'Excluir Dados').click();
     cy.wait(500);
