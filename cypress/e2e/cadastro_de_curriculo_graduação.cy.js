@@ -7,10 +7,10 @@ cy.wait(1000)
         cy.visit('https://hml.erp.inovacarreira.com.br/v2/academico/curriculos/criacao')
         
     cy.contains('Nome do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('AUTOMATIZADO')
+        .find('input, textarea').clear().type('AUTOMATIZADOo')
 
     cy.contains('Código do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('--AUTO--')
+        .find('input, textarea').clear().type('--AUTOo--')
 
     cy.contains('span', 'Selecione um nivel de ensino').click()
         cy.contains('div', 'Graduação').click()
