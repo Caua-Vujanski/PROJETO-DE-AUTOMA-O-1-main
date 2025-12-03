@@ -2,7 +2,7 @@ describe('Fluxo Completo - Login e Cadastro', () => {
   
   it('Deve fazer login e cadastrar um curso completo', () => {
   
-    cy.visit('https://dev.erp.inovacarreira.com.br/dashboard')
+    cy.visit('https://hml.erp.inovacarreira.com.br/login')
     cy.get('#login-input', { timeout: 10000 }).should('be.visible').type('admin')
     cy.get('#password-input').type('7Y/6p0p\\iYd{')
     cy.get('button[type="submit"]').click()
@@ -57,21 +57,26 @@ describe('Fluxo Completo - Login e Cadastro', () => {
       .find('input, textarea').clear()
       .type('TESTE DE PÓS')
     
-    cy.get('button[type="submit"]').scrollIntoView().wait(0).click()
-    
+    cy.contains('button', 'Avançar').click()
     cy.wait(100)
 
     cy.contains('Resolução do Curso').scrollIntoView().parent()
       .find('input, textarea').clear().type('Autorização Exemplo ');
 
-    cy.get('button[type="submit"]').scrollIntoView().wait(500).click();
-    cy.wait(100);
-    
+    cy.contains('button', 'Avançar').click()
 
-    cy.get('button[type="submit"]').scrollIntoView().wait(500).click();
-    cy.wait(500);
+
+    cy.contains('button', 'Concluir').click() 
+    cy.contains('button', 'Editar Dados').click()
+    cy.wait(1000)
+    cy.contains('button', 'Avançar').click()
+    cy.wait(1000)
+    cy.contains('button', 'Avançar').click()
+    cy.wait(1000)
+    cy.contains('button', 'Concluir').click()
+
     cy.contains('button', 'Excluir Dados').click();
-    cy.wait(500);
+    cy.wait(1000);
     cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click(); 
 
   })
