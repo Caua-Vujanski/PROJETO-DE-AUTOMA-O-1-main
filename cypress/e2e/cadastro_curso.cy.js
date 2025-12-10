@@ -2,13 +2,13 @@ describe('Fluxo Completo - Login e Cadastro', () => {
   
   it('Deve fazer login e cadastrar um curso completo', () => {
   
-    cy.visit('https://hml.erp.inovacarreira.com.br/login')
+    cy.visit('https://dev.erp.inovacarreira.com.br/login')
     cy.get('#login-input', { timeout: 10000 }).should('be.visible').type('admin')
     cy.get('#password-input').type('7Y/6p0p\\iYd{')
     cy.get('button[type="submit"]').click()
     cy.url({ timeout: 2000 }).should('include', '/dashboard')
     
-    cy.visit('https://hml.erp.inovacarreira.com.br/v2/academico/cursos/criacao')
+    cy.visit('https://dev.erp.inovacarreira.com.br/v2/academico/cursos/criacao')
     cy.wait(100)
 
     cy.contains('Nome do Curso').scrollIntoView().parent()
@@ -51,7 +51,7 @@ describe('Fluxo Completo - Login e Cadastro', () => {
       //.find('input, textarea').clear().type('01/03/2026')
     
     cy.contains('span', 'Selecione o colaborador').click()
-      cy.contains('div', 'Cauã').click()
+      cy.contains('div', 'João José Silva Santos').click()
     
     cy.contains('Descrição do Conhecimento do Curso').scrollIntoView().parent()
       .find('input, textarea').clear()

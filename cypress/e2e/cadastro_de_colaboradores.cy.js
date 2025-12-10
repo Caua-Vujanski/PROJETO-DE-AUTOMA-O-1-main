@@ -3,7 +3,7 @@ describe('Cadastro no fluxo de colaboradores', () => {
     it('Deve fazer o cadastro completo de um colaborador', () => {
 
         cy.login('admin', '7Y/6p0p\\iYd{')
-        cy.visit('https://hml.erp.inovacarreira.com.br/v2/cadastros/colaboradores/criacao')
+        cy.visit('https://dev.erp.inovacarreira.com.br/v2/cadastros/colaboradores/criacao')
 
     cy.get('#text-input input')
         .type('Cauã Vujanski')  
@@ -34,9 +34,16 @@ describe('Cadastro no fluxo de colaboradores', () => {
     cy.contains('div', 'ALTO ARAGUAIA - MT').click()
     
     cy.contains('button', 'Avançar').click()
+    cy.contains('button', 'Concluir').click()
+    cy.get('#text-input input')
+        .type('Cauã Vujanski') 
+    cy.wait(500)
 
+    cy.contains('div', 'Cauã Vujanski').click()
 
-
-
+    cy.contains('button', 'Excluir Dados').click();
+    cy.wait(500);
+    cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click();  
+    
     })
 })

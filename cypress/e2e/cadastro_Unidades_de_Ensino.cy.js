@@ -4,7 +4,7 @@ describe('Fluxo de Cadastro de Unidades de Ensino', () => {
 
 
 cy.login('admin', '7Y/6p0p\\iYd{')
-cy.visit('https://hml.erp.inovacarreira.com.br/v2/configuracoes/sistema/geral/unidades-de-ensino/criacao')
+cy.visit('https://dev.erp.inovacarreira.com.br/v2/configuracoes/sistema/geral/unidades-de-ensino/criacao')
 
 
     cy.contains('CNPJ').scrollIntoView().parent()

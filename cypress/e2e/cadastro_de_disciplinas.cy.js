@@ -3,7 +3,7 @@ describe('Cadastro completo de disciplinas', () => {
 
         cy.login('admin', '7Y/6p0p\\iYd{');
         cy.wait(500)
-        cy.visit('https://hml.erp.inovacarreira.com.br/v2/academico/disciplinas/criacao')
+        cy.visit('https://dev.erp.inovacarreira.com.br/v2/academico/disciplinas/criacao')
 
         cy.contains('Nome').scrollIntoView().parent()
             .find('input, textarea').clear().type('Teste Disciplinas')

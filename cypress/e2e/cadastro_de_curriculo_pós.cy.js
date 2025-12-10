@@ -3,7 +3,7 @@ describe('Fluxo de cadastro de curriculos', () => {
 it('Deve fazer o cadastro de curriculo e exclusão', () => {
 
  cy.login('admin', '7Y/6p0p\\iYd{')
-        cy.visit('https://hml.erp.inovacarreira.com.br/v2/academico/curriculos/criacao')
+        cy.visit('https://dev.erp.inovacarreira.com.br/v2/academico/curriculos/criacao')
         cy.wait(1000)
 
     cy.contains('Nome do Currículo').scrollIntoView().parent()

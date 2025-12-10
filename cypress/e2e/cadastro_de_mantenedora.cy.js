@@ -2,7 +2,7 @@ describe('Fluxo completo da criação de mantenedora', () => {
     it('Deve fazer o cadastro completo de uma mantenedora', () => {
 
 cy.login('admin', '7Y/6p0p\\iYd{')
-cy.visit('https://hml.erp.inovacarreira.com.br/v2/configuracoes/sistema/geral/mantenedoras/criacao')  
+cy.visit('https://dev.erp.inovacarreira.com.br/v2/configuracoes/sistema/geral/mantenedoras/criacao')  
 
         
 cy.contains('CNPJ').scrollIntoView().parent()
@@ -65,26 +65,5 @@ cy.contains('CNPJ').scrollIntoView().parent()
     cy.wait(600)
     cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
     })
 })

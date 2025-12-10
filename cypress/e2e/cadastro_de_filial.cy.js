@@ -4,7 +4,7 @@ describe('Fluxo do cadastro de filial', () => {
         cy.wait(1000)
 
     cy.login('admin', '7Y/6p0p\\iYd{')
-        cy.visit('https://hml.erp.inovacarreira.com.br/v2/configuracoes/sistema/geral/filiais/criacao')
+        cy.visit('https://dev.erp.inovacarreira.com.br/v2/configuracoes/sistema/geral/filiais/criacao')
 
 
     cy.contains('CNPJ').scrollIntoView().parent()
@@ -54,7 +54,7 @@ describe('Fluxo do cadastro de filial', () => {
     cy.contains('button', 'Avançar').click()
 
     cy.contains('CEP').scrollIntoView().parent()
-        .find('input, textarea').clear().type('87020-015')
+        .find('input, textarea').clear().type('87050730')
         cy.wait(2000)
 
     cy.contains('Número').scrollIntoView().parent()
@@ -62,7 +62,7 @@ describe('Fluxo do cadastro de filial', () => {
 
     cy.contains('Complemento').scrollIntoView().parent()
         .find('input, textarea').clear().type('UNIFATECIE')
-
+        cy.wait (3000)
     
     cy.contains('button', 'Avançar').click()
 
@@ -90,6 +90,9 @@ describe('Fluxo do cadastro de filial', () => {
     cy.contains('button', 'Avançar').click()
     cy.get('button[role="switch"]').click()
     cy.contains('button', 'Avançar').click()
+    cy.contains('CEP').scrollIntoView().parent()
+    .find('input, textarea').clear().type('87020-015')
+    cy.wait(3000)
     cy.contains('button', 'Avançar').click()
     cy.contains('button', 'Avançar').click()
     cy.contains('button', 'Avançar').click()

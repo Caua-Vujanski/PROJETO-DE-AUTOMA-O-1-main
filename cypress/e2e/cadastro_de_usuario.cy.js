@@ -2,10 +2,12 @@ describe('Cadastro de Usuario', () => {
     it('Deve fazer o cadastro de Usuario', () => {
 
         cy.login('admin', '7Y/6p0p\\iYd{');
-        cy.visit('https://hml.erp.inovacarreira.com.br/v2/controle-de-acesso/usuarios/criacao')
+        cy.visit('https://dev.erp.inovacarreira.com.br/v2/controle-de-acesso/usuarios/criacao')
         cy.wait(1000)
 
-        cy.contains('td', 'Cauã Vujanski').parent().click()
+        cy.get("input[placeholder='Pesquise...']").type('Teste Automatizado')
+        cy.contains("Teste Automatizado").click()
+        
         cy.contains('Button', 'Avançar').click()
 
         cy.contains('Mensageria').click()

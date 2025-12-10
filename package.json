@@ -24,6 +24,6 @@
   "author": "QA Engineer",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^13.17.0"
+    "cypress": "^15.7.1"
   }
 }
