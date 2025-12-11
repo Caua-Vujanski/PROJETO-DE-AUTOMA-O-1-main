@@ -73,7 +73,7 @@ describe('Fluxo Completo - Login e Cadastro', () => {
     cy.wait(1000)
     cy.contains('button', 'Avançar').click()
     cy.wait(1000)
-    cy.contains('button', 'Concluir').click()
+     cy.contains('button', 'Concluir').click() 
 
     cy.contains('button', 'Excluir Dados').click();
     cy.wait(1000);
@@ -132,7 +132,7 @@ describe('Cadastro no fluxo de colaboradores', () => {
     })
 })
 
-describe('Fluxo de cadastro de curriculos de graduação', () => {
+describe('Fluxo de cadastro de curriculos', () => {
 
 it('Deve fazer o cadastro de curriculo de graduação e exclusão', () => {
 
@@ -141,10 +141,10 @@ cy.wait(1000)
         cy.visit('https://dev.erp.inovacarreira.com.br/v2/academico/curriculos/criacao')
         
     cy.contains('Nome do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('AUTOMATIZADO 2.0')
+        .find('input, textarea').clear().type('TESTE 02 ')
 
     cy.contains('Código do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('--AUTO 2.0--')
+        .find('input, textarea').clear().type('TESTE 02')
 
     cy.contains('span', 'Selecione um nivel de ensino').click()
         cy.contains('div', 'Graduação').click()
@@ -326,13 +326,18 @@ cy.wait(1000)
     cy.contains('Button', 'Avançar').click()
     cy.contains('Button', 'Concluir').click()
 
-    cy.contains('button', 'Editar Dados').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('Button', 'Concluir').click()
-        
+
+    //cy.contains('button', 'Editar Dados').click()
+     // cy.contains('button', 'Avançar').click()
+     // cy.wait(500)
+      //cy.contains('button', 'Avançar').click()
+      //cy.wait(500)
+     // cy.contains('button', 'Avançar').click()
+     // cy.wait(500)
+     // cy.contains('button', 'Avançar').click()
+    //  cy.wait(500)
+     // cy.contains('Button', 'Concluir').click()
+     // cy.wait(500)  
     cy.contains('button', 'Excluir Dados').click();
     cy.wait(500);
     cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click();                 
@@ -349,10 +354,10 @@ it('Deve fazer o cadastro de curriculo Pós-Graduação e exclusão', () => {
         cy.wait(1000)
 
     cy.contains('Nome do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('AUTOMATIZADO 1.0')
+        .find('input, textarea').clear().type('TESTE 02')
 
     cy.contains('Código do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('--AUTo 1.0--')
+        .find('input, textarea').clear().type('TESTE02')
 
     cy.contains('span', 'Selecione um nivel de ensino').click()
       cy.contains('div', 'Pós-Graduação').click()
@@ -538,14 +543,14 @@ it('Deve fazer o cadastro de curriculo Pós-Graduação e exclusão', () => {
 
       cy.contains('Button', 'Avançar').click()
       cy.contains('Button', 'Concluir').click()
-      c.wait(1000)
-      cy.contains('button', 'Editar Dados').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('Button', 'Concluir').click()
+      cy.wait(1000)
+      //cy.contains('button', 'Editar Dados').click()
+      //cy.contains('button', 'Avançar').click()
+      //cy.contains('button', 'Avançar').click()
+      //cy.contains('button', 'Avançar').click()
+      //cy.contains('button', 'Avançar').click()
+     // cy.contains('button', 'Avançar').click()
+      //cy.contains('Button', 'Concluir').click()
 
 
     cy.contains('button', 'Excluir Dados').click();
@@ -681,7 +686,7 @@ describe('Fluxo do cadastro de filial', () => {
 
     cy.contains('CEP').scrollIntoView().parent()
         .find('input, textarea').clear().type('87050730')
-        cy.wait(1000)
+        cy.wait(2000)
 
     cy.contains('Número').scrollIntoView().parent()
         .find('input, texarea').clear().type('000')
@@ -758,8 +763,8 @@ cy.contains('CNPJ').scrollIntoView().parent()
     cy.contains('button', 'Avançar').click()
 
     cy.contains('CEP').scrollIntoView().parent()
-        .find('input, textarea').clear().type('87020-015')
-        cy.wait(2000)
+        .find('input, textarea').clear().type('87020015')
+        cy.wait(3000)
 
     cy.contains('Número').scrollIntoView().parent()
         .find('input, texarea').clear().type('000')
