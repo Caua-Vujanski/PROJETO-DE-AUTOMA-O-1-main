@@ -1,16 +1,16 @@
 describe('Fluxo de cadastro de curriculos', () => {
 
-it('Deve fazer o cadastro de curriculo e exclusão', () => {
+it('Deve fazer o cadastro de curriculo Pós Graduação e exclusão', () => {
 
  cy.login('admin', '7Y/6p0p\\iYd{')
         cy.visit('https://dev.erp.inovacarreira.com.br/v2/academico/curriculos/criacao')
         cy.wait(1000)
 
     cy.contains('Nome do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('AUTOMATIZADOo')
+        .find('input, textarea').clear().type('TESTE 02')
 
     cy.contains('Código do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('--AUTOo--')
+        .find('input, textarea').clear().type('--TESTE 02--')
 
     cy.contains('span', 'Selecione um nivel de ensino').click()
       cy.contains('div', 'Pós-Graduação').click()
@@ -196,13 +196,13 @@ it('Deve fazer o cadastro de curriculo e exclusão', () => {
 
       cy.contains('Button', 'Avançar').click()
       cy.contains('Button', 'Concluir').click()
-      cy.contains('button', 'Editar Dados').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('button', 'Avançar').click()
-      cy.contains('Button', 'Concluir').click()
+      //cy.contains('button', 'Editar Dados').click()
+      //cy.contains('button', 'Avançar').click()
+      //cy.contains('button', 'Avançar').click()
+      //cy.contains('button', 'Avançar').click()
+      //cy.contains('button', 'Avançar').click()
+      //cy.contains('button', 'Avançar').click()
+      //cy.contains('Button', 'Concluir').click()
 
 
     cy.contains('button', 'Excluir Dados').click();

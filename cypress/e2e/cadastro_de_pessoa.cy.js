@@ -20,7 +20,7 @@ describe('Cadastro de Pessoa', () => {
             .find('input').clear().type('01/01/2000')
 
         cy.contains('Documentos').scrollIntoView().parent().click()
-            .find('input, textarea').clear().type('718.171.240-30')
+            .find('input, textarea').clear().type('590.005.530-24')
 
         cy.contains('button', 'Avançar').scrollIntoView().click()
 

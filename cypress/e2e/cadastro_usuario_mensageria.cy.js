@@ -7,9 +7,9 @@ describe('Deve criar cadastro de usuario mensageria', () => {
         cy.visit('https://dev.erp.inovacarreira.com.br/v2/mensageria/configuracoes/usuarios-mensageria/criacao')
             cy.wait(1000)
 
-        cy.get("input[placeholder='Pesquise...']").type('Cauã Vujanski')
+        cy.get("input[placeholder='Pesquise...']").type('Teste Automatizado')
 
-        cy.contains('td', 'Cauã Vujanski').parent().click()
+        cy.contains('td', 'Teste Automatizado').parent().click()
             cy.wait(1000)
 
         cy.contains('Button', 'Avançar').click()
