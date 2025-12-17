@@ -9,7 +9,7 @@ describe('Cadastro completo de disciplinas', () => {
             .find('input, textarea').clear().type('Teste Disciplinas')
 
         cy.contains('Código').scrollIntoView().parent()
-            .find('input, textarea').clear().type('896571')
+            .find('input, textarea').clear().type('ATMTZD')
 
         cy.contains('Código Moodle').scrollIntoView().parent()
             .find('input, textarea').clear().type('5455665')

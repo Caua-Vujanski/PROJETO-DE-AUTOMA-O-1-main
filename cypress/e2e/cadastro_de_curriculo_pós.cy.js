@@ -7,10 +7,10 @@ it('Deve fazer o cadastro de curriculo Pós Graduação e exclusão', () => {
         cy.wait(1000)
 
     cy.contains('Nome do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('TESTE 02')
+        .find('input, textarea').clear().type('TESTE AUTOMATIZADO')
 
     cy.contains('Código do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('--TESTE 02--')
+        .find('input, textarea').clear().type('ATMTZD')
 
     cy.contains('span', 'Selecione um nivel de ensino').click()
       cy.contains('div', 'Pós-Graduação').click()

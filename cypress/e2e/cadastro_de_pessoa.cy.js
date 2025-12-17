@@ -20,7 +20,7 @@ describe('Cadastro de Pessoa', () => {
             .find('input').clear().type('01/01/2000')
 
         cy.contains('Documentos').scrollIntoView().parent().click()
-            .find('input, textarea').clear().type('590.005.530-24')
+            .find('input, textarea').clear().type('904.353.170-75')
 
         cy.contains('button', 'Avançar').scrollIntoView().click()
 
@@ -38,7 +38,7 @@ describe('Cadastro de Pessoa', () => {
         //step 3
 
         cy.contains('Valor').scrollIntoView().parent()
-            .find('input, textarea').clear().type('testepessoa@gmail.com')
+            .find('input, textarea').clear().type('testeautomatizado@gmail.com')
 
         cy.get(':contains("Valor")').parent()
             .find('input, textarea').eq(1).clear().type('(99) 99999-9999');
