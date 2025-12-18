@@ -40,7 +40,7 @@ cy.visit('https://dev.erp.inovacarreira.com.br/v2/configuracoes/sistema/geral/un
     cy.contains('button', 'Avançar').click()
 
    cy.contains('Escolha o Contato').parent().click()
-        cy.contains('E-mail').click()
+        cy.contains('E-mail de Contato').click()
 
     cy.get('input[placeholder="email@email.com"]').type('automatizado@gmail.com')
 
