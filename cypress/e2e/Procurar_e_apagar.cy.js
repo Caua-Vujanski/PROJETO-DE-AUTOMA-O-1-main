@@ -78,15 +78,15 @@ describe('Vai procurar o elemento, se existir vai entrar e apagar, caso não exi
 
 
 describe('Vai procurar o elemento, se existir vai entrar e apagar, caso não exista ele passara para o proximo', () => {
-    it('Deve procurar e apagar Teste Disciplinas', () => {
+    it('Deve procurar e apagar TESTE AUTOMATIZADO DISCIPLINA', () => {
         cy.login('admin', '7Y/6p0p\\iYd{')
             cy.visit('https://dev.erp.inovacarreira.com.br/v2/academico/disciplinas/listagem')
-                cy.get("input[placeholder='Pesquisar...']").should('be.visible').type('Teste Disciplinas{enter}')
+                cy.get("input[placeholder='Pesquisar...']").should('be.visible').type('TESTE AUTOMATIZADO DISCIPLINA{enter}')
                     cy.wait(2000) 
                         cy.get('body').then(($body) => {
-            if ($body.find(':contains("Teste Disciplinas")').length > 0) {
+            if ($body.find(':contains("TESTE AUTOMATIZADO DISCIPLINA")').length > 0) {
                 
-                cy.contains('Teste Disciplinas').should('be.visible').click()    
+                cy.contains('TESTE AUTOMATIZADO DISCIPLINA').should('be.visible').click()    
                 
                 cy.contains('button', 'Excluir Dados').should('be.visible').click()
                 
@@ -263,7 +263,7 @@ describe('Vai procurar o elemento, se existir vai entrar e apagar, caso não exi
                 cy.get('[role="dialog"]').should('be.visible').within(() => {
                     cy.contains('button', 'Excluir').click()
                 })
-
+        
                 cy.log('Registro excluído com sucesso!')
             } else {
                 cy.log('Registro não foi encontrado, pulando para o próximo...')
