@@ -2,9 +2,9 @@ describe('Fluxo completo da criação de mantenedora', () => {
     it('Deve fazer o cadastro completo de uma mantenedora', () => {
 
 cy.login('admin', '7Y/6p0p\\iYd{')
-cy.visit('https://dev.erp.inovacarreira.com.br/v2/configuracoes/sistema/geral/mantenedoras/criacao')  
+cy.visit('https://dev.erp.inovacarreira.com.br/v2/configuracoes/sistema/geral/mantenedoras/criacao')
 
-        
+
 cy.contains('CNPJ').scrollIntoView().parent()
         .find('input, textarea').clear().type('00.000.000/0000-00')
 
@@ -13,10 +13,10 @@ cy.contains('CNPJ').scrollIntoView().parent()
 
         cy.contains('Sigla').scrollIntoView().parent()
         .find('input, textarea').clear().type('--AUTO--')
-    
+
         cy.contains('Nome Social').scrollIntoView().parent()
         .find('input, textarea').clear().type('--AUTO--')
-        
+
     cy.contains('Código e-MEC/INEP *').scrollIntoView().parent()
         .find('input, textarea').clear().type('AUTO-404')
 
@@ -38,13 +38,13 @@ cy.contains('CNPJ').scrollIntoView().parent()
     cy.contains('button', 'Avançar').click()
 
     cy.contains('Escolha o Contato').parent().click()
-        cy.contains('E-mail').click()
+        cy.contains('E-mail de Contato').click()
 
     cy.get('input[placeholder="email@email.com"]').type('automatizado@gmail.com')
 
     cy.contains('Escolha o Cargo').click()
         cy.contains('div', 'Gestor de Filial').click()
-    
+
     cy.contains('Nome').scrollIntoView().parent()
         .find('input, texarea').clear().type('TESTE AUTOMATIZADO')
 

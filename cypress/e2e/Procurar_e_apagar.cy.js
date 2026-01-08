@@ -15,6 +15,7 @@ describe('Vai procurar o elemento, se existir vai entrar e apagar, caso não exi
                 cy.get('[role="dialog"]').should('be.visible').within(() => {
                     cy.contains('button', 'Excluir').click()
                 })
+                  cy.wait(2000)
 
                 cy.log('Registro excluído com sucesso!')
             } else {
@@ -42,6 +43,7 @@ describe('Vai procurar o elemento, se existir vai entrar e apagar, caso não exi
                 cy.get('[role="dialog"]').should('be.visible').within(() => {
                     cy.contains('button', 'Excluir').click()
                 })
+                  cy.wait(2000)
 
                 cy.log('Registro excluído com sucesso!')
             } else {
@@ -67,6 +69,7 @@ describe('Vai procurar o elemento, se existir vai entrar e apagar, caso não exi
                 cy.get('[role="dialog"]').should('be.visible').within(() => {
                     cy.contains('button', 'Excluir').click()
                 })
+                  cy.wait(2000)
 
                 cy.log('Registro excluído com sucesso!')
             } else {
@@ -93,6 +96,7 @@ describe('Vai procurar o elemento, se existir vai entrar e apagar, caso não exi
                 cy.get('[role="dialog"]').should('be.visible').within(() => {
                     cy.contains('button', 'Excluir').click()
                 })
+                  cy.wait(2000)
 
                 cy.log('Registro excluído com sucesso!')
             } else {
@@ -120,6 +124,7 @@ describe('Vai procurar o elemento, se existir vai entrar e apagar, caso não exi
                 cy.get('[role="dialog"]').should('be.visible').within(() => {
                     cy.contains('button', 'Excluir').click()
                 })
+                  cy.wait(2000)
 
                 cy.log('Registro excluído com sucesso!')
             } else {
@@ -146,6 +151,7 @@ describe('Vai procurar o elemento, se existir vai entrar e apagar, caso não exi
                 cy.get('[role="dialog"]').should('be.visible').within(() => {
                     cy.contains('button', 'Excluir').click()
                 })
+                  cy.wait(2000)
 
                 cy.log('Registro excluído com sucesso!')
             } else {
@@ -187,6 +193,7 @@ describe('Controle de Acesso - Excluir Pessoa', () => {
                 cy.get('[role="dialog"]:visible', { timeout: 10000 }).within(() => {
                     cy.contains('button', 'Excluir').click()
                 })
+                  cy.wait(2000)
 
                 cy.log('Registro excluído com sucesso!')
             } else {
@@ -201,19 +208,19 @@ describe('Vai procurar o elemento, se existir vai entrar e apagar, caso não exi
     it('Deve procurar e apagar FILIAL AUTOMATIZADA', () => {
         cy.login('admin', '7Y/6p0p\\iYd{')
             cy.visit('https://dev.erp.inovacarreira.com.br/v2/configuracoes/sistema/geral/filiais/listagem')
-                cy.get("input[placeholder='Pesquisar...']").should('be.visible').type('FILIAL AUTOMATIZADA{enter}')
+                cy.get("input[placeholder='Pesquisar...']").should('be.visible').type('FILIAL & AUTOMATIZADA{enter}')
                     cy.wait(2000) 
                         cy.get('body').then(($body) => {
-            if ($body.find(':contains("FILIAL AUTOMATIZADA")').length > 0) {
+            if ($body.find(':contains("FILIAL & AUTOMATIZADA")').length > 0) {
                 
-                cy.contains('FILIAL AUTOMATIZADA').should('be.visible').click()    
+                cy.contains('FILIAL & AUTOMATIZADA').should('be.visible').click()    
                 
                 cy.contains('button', 'Excluir Dados').should('be.visible').click()
                 
                 cy.get('[role="dialog"]').should('be.visible').within(() => {
                     cy.contains('button', 'Excluir').click()
                 })
-
+                  cy.wait(2000)
                 cy.log('Registro excluído com sucesso!')
             } else {
                 cy.log('Registro não foi encontrado, pulando para o próximo...')
@@ -238,7 +245,7 @@ describe('Vai procurar o elemento, se existir vai entrar e apagar, caso não exi
                 cy.get('[role="dialog"]').should('be.visible').within(() => {
                     cy.contains('button', 'Excluir').click()
                 })
-
+                  cy.wait(2000)
                 cy.log('Registro excluído com sucesso!')
             } else {
                 cy.log('Registro não foi encontrado, pulando para o próximo...')
@@ -263,7 +270,8 @@ describe('Vai procurar o elemento, se existir vai entrar e apagar, caso não exi
                 cy.get('[role="dialog"]').should('be.visible').within(() => {
                     cy.contains('button', 'Excluir').click()
                 })
-        
+                          cy.wait(2000)
+
                 cy.log('Registro excluído com sucesso!')
             } else {
                 cy.log('Registro não foi encontrado, pulando para o próximo...')
