@@ -2,24 +2,24 @@ describe('Fluxo de cadastro de curriculos', () => {
 
 it('Deve fazer o cadastro de curriculo e exclusão', () => {
 
-cy.wait(1000) 
+cy.wait(1000)
  cy.login('admin', '7Y/6p0p\\iYd{')
         cy.visit('https://dev.erp.inovacarreira.com.br/v2/academico/curriculos/criacao')
-        
+
     cy.contains('Nome do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('TESTE AUTOMATIZADA ')
+        .find('input, textarea').clear().type('TESTE AUTOMATIZADO GRADUAÇÃO')
 
     cy.contains('Código do Currículo').scrollIntoView().parent()
-        .find('input, textarea').clear().type('ATMTZDA')
+        .find('input, textarea').clear().type('ASDW23')
 
     cy.contains('span', 'Selecione um nivel de ensino').click()
         cy.contains('div', 'Graduação').click()
 
     cy.contains('span', 'Selecione um módulo').click()
-        cy.contains('div', 'Módulo 1').click()
+        cy.contains('div', 'Módulo 2').click()
 
     cy.contains('span', 'Selecione um curso').click()
-        cy.contains('div', '2ª GRADUAÇÃO EM ARTES VISUAIS').click()
+        cy.contains('div', '2ª GRADUAÇÃO - CIÊNCIAS CONTÁBEIS').click()
 
     cy.contains('Valor total do Currículo').scrollIntoView().parent()
         .find('input, textarea').clear().type('100000')
@@ -42,7 +42,7 @@ cy.wait(1000)
     cy.contains('div', 'ADMINISTRAÇÃO DE COMÉRCIO EXTERIOR').click()
 
     cy.contains('Button', 'Avançar').click()
-    
+
     cy.contains('span', 'Selecione a Forma da Disciplina').click()
       cy.contains('div', 'Eletiva').click()
 
@@ -150,9 +150,9 @@ cy.wait(1000)
             //cy.wait(1000)
 
 
-    cy.get('svg.lucide-chevron-right').closest('button').click()    
+    cy.get('svg.lucide-chevron-right').closest('button').click()
 
-   
+
     cy.contains('span', 'Selecione a Forma da Disciplina').click()
       cy.contains('div', 'teste-augusto-v').click()
 
@@ -191,7 +191,7 @@ cy.wait(1000)
 
     cy.contains('Button', 'Avançar').click()
     cy.contains('Button', 'Concluir').click()
-
+    cy.wait(2000)
 
     //cy.contains('button', 'Editar Dados').click()
      // cy.contains('button', 'Avançar').click()
@@ -203,10 +203,10 @@ cy.wait(1000)
      // cy.contains('button', 'Avançar').click()
     //  cy.wait(500)
      // cy.contains('Button', 'Concluir').click()
-     // cy.wait(500)  
+     // cy.wait(500)
     cy.contains('button', 'Excluir Dados').click();
     cy.wait(500);
-    cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click();                 
+    cy.get('[role="dialog"]:visible').contains('button', 'Excluir').click();
 
 })
     })
